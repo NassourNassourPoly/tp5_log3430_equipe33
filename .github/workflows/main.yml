@@ -25,5 +25,5 @@ jobs:
       - name: Start Flask server
         run: |
           echo "Starting Flask server"
-          python server.py
+          python server.py &
           sleep 30
