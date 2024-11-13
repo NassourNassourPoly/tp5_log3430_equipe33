@@ -30,9 +30,3 @@ class SimpleTasks(TaskSet):
 class SimpleUser(HttpUser):
     tasks = [SimpleTasks]
     wait_time = between(1, 5)  # Simulate a wait time between requests
-    weight = 2
-
-class HeavyUser(HttpUser):
-    tasks = [SimpleTasks]
-    wait_time = between(5, 10)  # Simulate a wait time between requests
-    weight = 98

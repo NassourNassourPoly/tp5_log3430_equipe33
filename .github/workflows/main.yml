@@ -27,3 +27,11 @@ jobs:
           echo "Starting Flask server"
           python server.py &
           sleep 30
+
+      - name: Run locust
+        run: |
+          echo "Running locust"
+          locust --headless --users 10000 --spawn-rate 100 -t 2m -H http://127.0.0.1:5000
+    
+          
+
